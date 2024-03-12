@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+
+# FUNÇÕES
+
+soma()
+	{
+		res=$((n1+n2))
+		echo -e "\n"
+		echo "A soma de $n1 e $n2 eh: $res"
+	}
+
+subtracao()
+        {
+                res=$((n1-n2))
+		echo -e "\n"
+                echo "A subtração de $n1 por $n2 eh: $res"
+        }
+
+divisao()
+        {
+                res=$((n1/n2))
+		echo -e "\n"
+                echo "A divisão de $n1 por $n2 eh: $res"
+        }
+
+multiplicacao()
+        {
+                res=$((n1*n2))
+		echo -e "\n"
+                echo "A multiplicação de $n1 e $n2 eh: $res"
+        }
+
+
+# HEADER
+
+echo "--------------------------------------------"
+echo "         BEM VINDO A CALCULADORA            "
+echo "--------------------------------------------"
+
+###################################################
+# ESCOLHENDO FUNÇÃO DA CALCULADORA
+echo "Escolha uma opção!"
+echo "1. SOMA"
+echo "2. SUBTRAÇÃO"
+echo "3. DIVISÃO"
+read -p "4. MULTIPLICAÇÃO: " op
+
+#USUARIO INSERE OS VALORES
+read -p "Digite o primeiro numero: " n1
+read -p "Digite o segundo numero: " n2
+
+# ESTRUTURA CONDICIONAL
+case $op in
+		1) soma ;;
+		2) subtracao ;;
+		3) divisao ;;
+		4) multiplicacao ;;
+esac
